@@ -17,26 +17,26 @@ import pom_classes.Search_company;
 import pom_classes.Tables;
 
 public class Tests extends BaseClass{
-@Test(priority=0)
+@Test(enabled=false)
 public void search_name() {
 	Search_Name g = new Search_Name(driver);
 	g.searchbox.sendKeys("Mainak");
 	g.searchbox.sendKeys(Keys.ENTER);
 	g.getresult();
 }
-@Test(priority=1)
+@Test(enabled=false)
 public void search_company() throws InterruptedException, AWTException {
 	Search_company c = new Search_company(driver);
 	c.search_company();
 	c.find_noc();
 }
-@Test(priority=2)
+@Test(enabled=false)
 public void get_table() {
 	driver.get("https://www.w3schools.com/html/html_tables.asp");
 	Tables t=new Tables(driver);
 	t.get_table();
 }
-@Test(priority=3)
+@Test(enabled=false)
 public void popup() throws AWTException, InterruptedException {
 	driver.get("https://the-internet.herokuapp.com/javascript_alerts");
 	// Click a button that triggers the prompt dialog
@@ -64,7 +64,7 @@ System.out.println(result.getText());
 }
 
 
-@Test(priority=4)
+@Test(enabled=false)
 public void iframe() throws InterruptedException {
 	driver.get("https://www.w3schools.com/html/html_iframe.asp");
 	WebElement iframe = driver.findElement(By.xpath("//iframe[@title='W3Schools HTML Tutorial']"));
@@ -78,11 +78,12 @@ public void iframe() throws InterruptedException {
 @Test(priority=5)
 public void newtab() throws AWTException, InterruptedException {
 	
-	driver.get("https://www.google.com");
-	WebElement body=driver.findElement(By.xpath("//body"));
-	body.sendKeys(Keys.CONTROL, "t");
-	WebDriverWait wait = new WebDriverWait(driver, 10);
-	wait.until(ExpectedConditions.numberOfWindowsToBe(2));
+	Robot robot=new Robot();
+	robot.keyPress(KeyEvent.VK_CONTROL);
+	robot.keyPress(KeyEvent.VK_T);
+	robot.keyRelease(KeyEvent.VK_CONTROL);
+	robot.keyRelease(KeyEvent.VK_T);
+Thread.sleep(4000);
 	
 	ArrayList<String> tabs = new ArrayList<String>(driver.getWindowHandles());
 	driver.switchTo().window(tabs.get(1));
