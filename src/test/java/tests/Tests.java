@@ -78,12 +78,11 @@ public void iframe() throws InterruptedException {
 @Test(priority=5)
 public void newtab() throws AWTException, InterruptedException {
 	
-	Robot robot=new Robot();
-	robot.keyPress(KeyEvent.VK_CONTROL);
-	robot.keyPress(KeyEvent.VK_T);
-	robot.keyRelease(KeyEvent.VK_CONTROL);
-	robot.keyRelease(KeyEvent.VK_T);
-Thread.sleep(4000);
+	driver.get("https://www.google.com");
+	WebElement body=driver.findElement(By.xpath("//body"));
+	body.sendKeys(Keys.CONTROL, "t");
+	WebDriverWait wait = new WebDriverWait(driver, 10);
+	wait.until(ExpectedConditions.numberOfWindowsToBe(2));
 	
 	ArrayList<String> tabs = new ArrayList<String>(driver.getWindowHandles());
 	driver.switchTo().window(tabs.get(1));
