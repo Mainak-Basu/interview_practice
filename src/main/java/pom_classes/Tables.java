@@ -1,5 +1,8 @@
 package pom_classes;
 
+import java.awt.AWTException;
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
 import java.util.ArrayList;
 import java.util.LinkedHashSet;
 import java.util.List;
@@ -35,5 +38,19 @@ public void get_table() {
 			System.out.print(q2);
 			System.out.println();
 		}
+}
+public void open_new_tab() throws AWTException, InterruptedException {
+	Robot robot=new Robot();
+	robot.keyPress(KeyEvent.VK_CONTROL);
+	robot.keyPress(KeyEvent.VK_T);
+	robot.keyRelease(KeyEvent.VK_CONTROL);
+	robot.keyRelease(KeyEvent.VK_T);
+Thread.sleep(4000);
+	
+	ArrayList<String> tabs = new ArrayList<String>(driver.getWindowHandles());
+	driver.switchTo().window(tabs.get(1));
+
+	// Navigate to a URL in the new tab
+	driver.get("https://www.google.com");
 }
 }

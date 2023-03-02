@@ -77,18 +77,7 @@ public void iframe() throws InterruptedException {
 }
 @Test(priority=5)
 public void newtab() throws AWTException, InterruptedException {
-	
-	Robot robot=new Robot();
-	robot.keyPress(KeyEvent.VK_CONTROL);
-	robot.keyPress(KeyEvent.VK_T);
-	robot.keyRelease(KeyEvent.VK_CONTROL);
-	robot.keyRelease(KeyEvent.VK_T);
-Thread.sleep(4000);
-	
-	ArrayList<String> tabs = new ArrayList<String>(driver.getWindowHandles());
-	driver.switchTo().window(tabs.get(1));
-
-	// Navigate to a URL in the new tab
-	driver.get("https://www.google.com");
-}
+	Tables t=new Tables(driver);
+	t.open_new_tab();
+	}
 }
