@@ -33,7 +33,7 @@ public class BaseClass {
 		driver=new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		driver.get("https://the-internet.herokuapp.com/javascript_alerts");
+		driver.get("https://www.google.com/");
 			}
 	
 	

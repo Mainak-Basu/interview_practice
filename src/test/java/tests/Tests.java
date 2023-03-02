@@ -1,6 +1,4 @@
 package tests;
-import static org.testng.Assert.assertEquals;
-
 import java.awt.AWTException;
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
@@ -19,26 +17,28 @@ import pom_classes.Search_company;
 import pom_classes.Tables;
 
 public class Tests extends BaseClass{
-@Test(enabled=false)
+@Test(priority=0)
 public void search_name() {
 	Search_Name g = new Search_Name(driver);
 	g.searchbox.sendKeys("Mainak");
 	g.searchbox.sendKeys(Keys.ENTER);
 	g.getresult();
 }
-@Test(enabled=false)
+@Test(priority=1)
 public void search_company() throws InterruptedException, AWTException {
 	Search_company c = new Search_company(driver);
 	c.search_company();
 	c.find_noc();
 }
-@Test(enabled = false)
+@Test(priority=2)
 public void get_table() {
+	driver.get("https://www.w3schools.com/html/html_tables.asp");
 	Tables t=new Tables(driver);
 	t.get_table();
 }
-@Test
+@Test(priority=3)
 public void popup() throws AWTException, InterruptedException {
+	driver.get("https://the-internet.herokuapp.com/javascript_alerts");
 	// Click a button that triggers the prompt dialog
 	WebElement button = driver.findElement(By.xpath("//button[@onclick='jsPrompt()']"));
 	button.click();
@@ -64,7 +64,7 @@ System.out.println(result.getText());
 }
 
 
-@Test
+@Test(priority=4)
 public void iframe() throws InterruptedException {
 	driver.get("https://www.w3schools.com/html/html_iframe.asp");
 	WebElement iframe = driver.findElement(By.xpath("//iframe[@title='W3Schools HTML Tutorial']"));
@@ -75,7 +75,7 @@ public void iframe() throws InterruptedException {
 	driver.switchTo().parentFrame();
 	Thread.sleep(3000);
 }
-@Test
+@Test(priority=5)
 public void newtab() throws AWTException, InterruptedException {
 	
 	Robot robot=new Robot();
