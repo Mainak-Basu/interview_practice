@@ -11,7 +11,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseClass {
 	
-	public WebDriver driver;
+	public static WebDriver driver;
 
 	
 

@@ -16,7 +16,7 @@ import generic_utility.BaseClass;
 public class Checkboxes extends BaseClass{
 	public Checkboxes(WebDriver driver)
 	{
-		this.driver=driver;
+		//this.driver=driver;
 		PageFactory.initElements(driver, this);
 	}
 @FindBy(xpath = "//label[@for='checkbox-2']")
