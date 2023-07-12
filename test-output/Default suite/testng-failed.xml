@@ -7,8 +7,8 @@
         <methods>
           <include name="acConfig"/>
           <include name="bcconfig"/>
-          <include name="indeed_accountant"/>
           <include name="bsconfig"/>
+          <include name="excel"/>
           <include name="asConfig"/>
         </methods>
       </class> <!-- tests.Tests -->

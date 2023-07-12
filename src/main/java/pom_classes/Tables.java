@@ -16,7 +16,7 @@ import generic_utility.BaseClass;
 public class Tables extends BaseClass{
 	public Tables(WebDriver driver)
 	{
-		this.driver=driver;
+		//this.driver=driver;
 		PageFactory.initElements(driver, this);
 	}
 	@FindBy(xpath="//table[@id='customers']/tbody")

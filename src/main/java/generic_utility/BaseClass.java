@@ -33,7 +33,7 @@ public class BaseClass {
 		driver=new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		driver.get("https://www.google.com/");
+	driver.get("https://www.google.com/");
 			}
 	
 	

@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="9" total="10" passed="1" failed="0" skipped="0">
+<testng-results ignored="15" total="16" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-04-12T10:55:04 IST" name="Default suite" finished-at="2023-04-12T10:56:15 IST" duration-ms="70634">
+  <suite started-at="2023-07-12T10:46:56 IST" name="Default suite" finished-at="2023-07-12T10:47:07 IST" duration-ms="10972">
     <groups>
     </groups>
-    <test started-at="2023-04-12T10:55:04 IST" name="Default test" finished-at="2023-04-12T10:56:15 IST" duration-ms="70634">
+    <test started-at="2023-07-12T10:46:56 IST" name="Default test" finished-at="2023-07-12T10:47:07 IST" duration-ms="10972">
       <class name="tests.Tests">
-        <test-method is-config="true" signature="bsconfig()[pri:0, instance:tests.Tests@4cc451f2]" started-at="2023-04-12T10:55:04 IST" name="bsconfig" finished-at="2023-04-12T10:55:04 IST" duration-ms="12" status="PASS">
+        <test-method is-config="true" signature="bsconfig()[pri:0, instance:tests.Tests@6b81ce95]" started-at="2023-07-12T10:46:56 IST" name="bsconfig" finished-at="2023-07-12T10:46:56 IST" duration-ms="6" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- bsconfig -->
-        <test-method is-config="true" signature="bcconfig()[pri:0, instance:tests.Tests@4cc451f2]" started-at="2023-04-12T10:55:04 IST" name="bcconfig" finished-at="2023-04-12T10:55:08 IST" duration-ms="3868" status="PASS">
+        <test-method is-config="true" signature="bcconfig()[pri:0, instance:tests.Tests@6b81ce95]" started-at="2023-07-12T10:46:56 IST" name="bcconfig" finished-at="2023-07-12T10:47:01 IST" duration-ms="4506" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- bcconfig -->
-        <test-method signature="indeed_accountant()[pri:0, instance:tests.Tests@4cc451f2]" started-at="2023-04-12T10:55:08 IST" name="indeed_accountant" finished-at="2023-04-12T10:56:14 IST" duration-ms="66376" status="PASS">
+        <test-method signature="toggle()[pri:0, instance:tests.Tests@6b81ce95]" started-at="2023-07-12T10:47:01 IST" name="toggle" finished-at="2023-07-12T10:47:07 IST" duration-ms="6152" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- indeed_accountant -->
-        <test-method is-config="true" signature="acConfig()[pri:0, instance:tests.Tests@4cc451f2]" started-at="2023-04-12T10:56:14 IST" name="acConfig" finished-at="2023-04-12T10:56:15 IST" duration-ms="343" status="PASS">
+        </test-method> <!-- toggle -->
+        <test-method is-config="true" signature="acConfig()[pri:0, instance:tests.Tests@6b81ce95]" started-at="2023-07-12T10:47:07 IST" name="acConfig" finished-at="2023-07-12T10:47:07 IST" duration-ms="276" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- acConfig -->
-        <test-method is-config="true" signature="asConfig()[pri:0, instance:tests.Tests@4cc451f2]" started-at="2023-04-12T10:56:15 IST" name="asConfig" finished-at="2023-04-12T10:56:15 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="asConfig()[pri:0, instance:tests.Tests@6b81ce95]" started-at="2023-07-12T10:47:07 IST" name="asConfig" finished-at="2023-07-12T10:47:07 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- asConfig -->
